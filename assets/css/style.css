@@ -1,0 +1,247 @@
+nav {
+  padding: 20px;
+  grid-area: menu;
+  background: #31565a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-family: "El Messiri", sans-serif;
+  color: #b1d5bc;
+  font-size: 25px;
+}
+
+h1 {
+  font-family: "El Messiri", sans-serif;
+  color: #31565a;
+  font-weight: 700;
+  text-align: center;
+}
+
+.leftnav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav img {
+  width: 80px;
+  height: 80px;
+}
+
+.navmenu {
+  font-size: 15px;
+}
+
+.navmenu ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.searchbox {
+  background: white;
+  border: 1px solid #979494;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  color: #747373;
+  padding: 5px;
+}
+
+main {
+  grid-area: seccion-principal;
+  background-image: url(/assets/img/wallpaw.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background: #e1e7f3;
+  opacity: 0.9;
+  margin-bottom: 50px;
+}
+
+#section1 h2 {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: "El Messiri", sans-serif;
+  color: #31565a;
+  font-weight: 700;
+}
+
+#section1 p {
+  text-align: justify;
+}
+
+#section2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px;
+}
+
+#section2 h1 {
+  font-family: "El Messiri", sans-serif;
+  color: #31565a;
+  font-weight: 700;
+}
+
+#section2 img {
+  width: auto;
+  height: 250px;
+  filter: grayscale(100);
+  transition: 1s ease-in;
+}
+
+#section2 img:hover {
+  filter: grayscale(0);
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  background-color: snow;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: auto;
+}
+
+.pagination {
+  justify-content: center;
+  align-items: baseline;
+  font-size: 20px;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+#section3 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: #e1e7f3;
+  opacity: 0.9;
+  align-items: center;
+}
+
+#section3 h2 {
+  font-family: "El Messiri", sans-serif;
+  color: #31565a;
+  font-weight: 700;
+  text-align: center;
+}
+
+#section3 p {
+  text-align: justify;
+}
+
+#section4 {
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+#section4 h2 {
+  font-family: "El Messiri", sans-serif;
+  color: #31565a;
+  font-weight: 700;
+  text-align: center;
+}
+
+.relleno {
+  border-bottom: 1px solid #ccc;
+  color: grey;
+}
+
+.tit {
+  font-weight: 600;
+}
+footer {
+  grid-area: pie-de-pagina;
+  background: #31565a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.redsocial {
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  border: 1px solid black;
+  grid-template-rows: 1fr 40fr 1fr;
+  grid-template-areas:
+    "menu"
+    "seccion-principal"
+    "pie-de-pagina";
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 1s;
+}
+
+a:hover {
+  background-color: #213638;
+  color: white;
+}
+
+@media (max-width: 575px) {
+  .navmenu {
+    font-size: 15px;
+    display: none;
+  }
+
+  .navmenu ul {
+    list-style-type: none;
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .grid {
+    grid-template-areas:
+      "menu seccion-principal"
+      "pie-de-pagina seccion-principal";
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 5fr 2fr;
+    min-height: 100vh;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  #section2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  footer {
+    background-color: #213638;
+    justify-content: flex-end;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
